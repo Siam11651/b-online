@@ -1,0 +1,110 @@
+<script >
+    import "../style.scss"
+</script>
+
+<div class="mid border-bottom py-3 px-5">
+    <a href="/">
+        <img src="logo.webp" alt="logo" />
+    </a>
+</div>
+
+<div class="mid pt-5 px-5">
+    <p class="big-text fw-semibold gray-800">
+        All your online marketing solutions
+    </p>
+</div>
+
+<div class="right-box-container mt-5">
+    <div class="right-box">
+        <p class="right-box-text text-white fw-medium p-5">
+            In the realm of online marketing, brands breathe life through compelling ideas and relevance. The power and sustainability of a brand hinge on its unique concept, shaping a persona that influences thoughts, emotions, and actions. The greater the online relevance, the more profound and impactful the brand's presence becomes.
+        </p>
+    </div>
+</div>
+
+<div class="about-capability mt-5">
+    <div class="me-5">
+        <p class="fs-1 fw-semibold gray-800">
+            About Us
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            BOnline was founded by experienced digital marketing and ad tech professionals who decided to focus on the inclusive and fastest-growing online advertising world
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            BOnline ensures expertise in providing online media, online content, online marketing, influencer marketing, and digital PR services
+        </p>
+    </div>
+    <svg class="design" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f4821f" d="m 142.89561,55.671734 c 13.09051,25.317914 15.82369,49.916576 8.6311,68.473456 -7.04873,18.70073 -24.02325,31.64739 -46.03257,47.18339 C 83.628666,186.86457 56.72838,205.13375 39.753868,198.66042 22.779357,192.04323 15.874471,160.53969 8.6818813,129.32385 1.6331443,97.964158 -5.7032977,66.60447 6.6679563,41.430406 19.183062,16.112491 51.262012,-3.1636489 78.881556,0.43264612 106.64496,3.8850891 129.94895,30.209967 142.89561,55.671734 Z" />
+    </svg>
+</div>
+
+<div class="about-capability mt-5">
+    <svg class="design" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f4821f" d="M 143.31374,2.3863849 C 155.6345,7.76718 162.88201,22.943783 170.41942,37.29257 c 7.39246,14.348788 15.07481,28.007729 21.45262,45.115902 6.52275,17.108164 11.74096,37.665558 4.9283,53.256078 -6.81265,15.45253 -25.51122,25.80022 -44.35474,37.80353 -18.84352,11.86535 -37.54208,25.52429 -56.965406,26.49007 -19.42332,0.82781 -39.281485,-10.76159 -57.980052,-22.7649 C 18.946525,165.05197 1.6974594,152.63474 0.10300842,136.21642 -1.3464936,119.66012 12.858619,99.240698 20.251076,82.960348 27.788483,66.54202 28.658184,54.40074 32.861737,42.397428 37.065291,30.394114 44.747648,18.52877 55.763858,12.596098 66.925014,6.6634272 81.564984,6.5254582 97.509494,4.1799826 113.45402,1.834508 130.99298,-2.8564414 143.31374,2.3863849 Z" />
+    </svg>
+    <div class="ms-5">
+        <p class="fs-1 fw-semibold gray-800">
+            Capabilities
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            We work with brands to identify their online marketing goals and opportunities tailored to their requirements and objectives
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            At BOnline we offer research to identify an effective way to communicate the online communications
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            At BOnline we create online contents that helps brands to achieve effective engagements
+        </p>
+        <p class="fs-4 fw-semibold gray-700">
+            BOnline is here to help clients to achieve long-term ambitions of their business through efficient online marketing solutions
+        </p>
+    </div>
+</div>
+
+<style>
+    .mid
+    {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .big-text
+    {
+        width: 50%;
+        font-size: 4em;
+    }
+    .right-box-container
+    {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    .right-box
+    {
+        background-color: #f4821f;
+        width: 800px;
+        height: 400px;
+        border-top-left-radius: 32px;
+        border-bottom-left-radius: 32px;
+    }
+    .right-box-text
+    {
+        font-size: 1.5em;
+        width: 724px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-capability
+    {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+    .design
+    {
+        width: 50%;
+    }
+</style>
