@@ -102,6 +102,7 @@
         {/if}
     </p>
 </div>
+
 <style>
     .mid
     {
@@ -113,7 +114,8 @@
     .big-text
     {
         max-width: 600px;
-        font-size: 72px;
+        /* font-size: 72px; */
+        font-size: 450%;
     }
     .right-box-container
     {
