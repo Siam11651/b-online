@@ -16,7 +16,7 @@
 
 <div class="right-box-container mt-5">
     <div class="right-box">
-        <p class="right-box-text text-white fw-medium p-5">
+        <p class="right-box-text text-white fw-medium ms-5 p-5">
             In the realm of online marketing, brands breathe life through compelling ideas and relevance. The power and sustainability of a brand hinge on its unique concept, shaping a persona that influences thoughts, emotions, and actions. The greater the online relevance, the more profound and impactful the brand's presence becomes.
         </p>
     </div>
@@ -62,17 +62,19 @@
     </div>
 </div>
 
+
+
 <style>
     .mid
     {
-        width: 70%;
+        width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
     .big-text
     {
-        width: 50%;
-        font-size: 4em;
+        width: 600px;
+        font-size: 72px;
     }
     .right-box-container
     {
@@ -83,21 +85,18 @@
     .right-box
     {
         background-color: #f4821f;
-        width: 800px;
-        height: 400px;
+        width: 50%;
         border-top-left-radius: 32px;
         border-bottom-left-radius: 32px;
     }
     .right-box-text
     {
         font-size: 1.5em;
-        width: 724px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 700px;
     }
     .about-capability
     {
-        width: 70%;
+        width: 1200px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
