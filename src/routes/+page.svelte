@@ -46,7 +46,7 @@
 </div>
 
 <div class="about-capability-container mt-5">
-    <div class="about-capability me-5">
+    <div class="about-capability">
         <p class="fs-1 fw-semibold gray-800">
             About Us
         </p>
@@ -63,10 +63,10 @@
 </div>
 
 <div class="about-capability-container mt-5">
-    <svg class="design" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <svg class="design" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
         <path fill="#f4821f" d="M 143.31374,2.3863849 C 155.6345,7.76718 162.88201,22.943783 170.41942,37.29257 c 7.39246,14.348788 15.07481,28.007729 21.45262,45.115902 6.52275,17.108164 11.74096,37.665558 4.9283,53.256078 -6.81265,15.45253 -25.51122,25.80022 -44.35474,37.80353 -18.84352,11.86535 -37.54208,25.52429 -56.965406,26.49007 -19.42332,0.82781 -39.281485,-10.76159 -57.980052,-22.7649 C 18.946525,165.05197 1.6974594,152.63474 0.10300842,136.21642 -1.3464936,119.66012 12.858619,99.240698 20.251076,82.960348 27.788483,66.54202 28.658184,54.40074 32.861737,42.397428 37.065291,30.394114 44.747648,18.52877 55.763858,12.596098 66.925014,6.6634272 81.564984,6.5254582 97.509494,4.1799826 113.45402,1.834508 130.99298,-2.8564414 143.31374,2.3863849 Z" />
     </svg>
-    <div class="about-capability ms-5">
+    <div class="about-capability">
         <p class="fs-1 fw-semibold gray-800">
             Capabilities
         </p>
@@ -105,7 +105,8 @@
 <style>
     .mid
     {
-        max-width: 1200px;
+        width: 1200px;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -143,7 +144,7 @@
     }
     .about-capability
     {
-        min-width: 325px;
+        min-width: 350px;
     }
     .design
     {
