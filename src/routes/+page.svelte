@@ -1,10 +1,33 @@
-<script >
-    import "../style.scss"
+<script lang="ts">
+    import "../style.scss";
+
+    let tab_active: string[] = ["active", "", ""];
+
+    function on_tab0(): void
+    {
+        tab_active[0] = "active";
+        tab_active[1] = "";
+        tab_active[2] = "";
+    }
+
+    function on_tab1(): void
+    {
+        tab_active[0] = "";
+        tab_active[1] = "active";
+        tab_active[2] = "";
+    }
+
+    function on_tab2(): void
+    {
+        tab_active[0] = "";
+        tab_active[1] = "";
+        tab_active[2] = "active";
+    }
 </script>
 
 <div class="mid border-bottom py-3 px-5">
     <a href="/">
-        <img src="logo.webp" alt="logo" />
+        <img src="logo.webp" alt="logo" height="48px" />
     </a>
 </div>
 
@@ -62,8 +85,23 @@
     </div>
 </div>
 
-
-
+<div class="tab-info my-5">
+    <!-- svelte-ignore a11y-invalid-attribute -->
+    <div class="tab-options nav nav-pills mb-3">
+        <a class="nav-link rounded-pill {tab_active[0]}" aria-current="page" href="javascript:" on:click={on_tab0}>Online Marketing</a>
+        <a class="nav-link rounded-pill {tab_active[1]}" aria-current="page" href="javascript:" on:click={on_tab1}>Platform Strategy</a>
+        <a class="nav-link rounded-pill {tab_active[2]}" aria-current="page" href="javascript:" on:click={on_tab2}>Content Solution</a>
+    </div>
+    <p class="fs-4 fw-semibold text-center gray-700">
+        {#if tab_active[0] == "active"}
+            We run Online Advertising Campaigns on selected channels based on business requirements from increasing Online TOMA to driving conversion
+        {:else if tab_active[1] == "active"}
+            Omnichannel Online Marketing Strategy and Management A comprehensive solution for all online marketing needs.
+        {:else}
+            Human centric designs to drive effective results for online marketing.
+        {/if}
+    </p>
+</div>
 <style>
     .mid
     {
@@ -105,5 +143,16 @@
     .design
     {
         width: 50%;
+    }
+    .tab-info
+    {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tab-options
+    {
+        display: flex;
+        justify-content: center;
     }
 </style>
