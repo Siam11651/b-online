@@ -1,7 +1,12 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import "../style.scss";
+    import { Carousel } from "bootstrap";
 
     let tab_active: string[] = ["active", "", ""];
+    let carousel_elem: HTMLDivElement;
+    let carousel_active: string[] = ["active", "", ""];
+    let carousel_idx: number = 0;
 
     function on_tab0(): void
     {
@@ -23,6 +28,16 @@
         tab_active[1] = "";
         tab_active[2] = "active";
     }
+
+    onMount((): void =>
+    {
+        let carousel: Carousel = new Carousel(carousel_elem);
+
+        setInterval((): void =>
+        {
+            carousel.next();
+        }, 3000);
+    });
 </script>
 
 <div class="mid border-bottom py-3 px-5">
@@ -38,6 +53,19 @@
 </div>
 
 <div class="right-box-container mt-5">
+    <div class="intro-carousel carousel slide" data-bs-ride="carousel" bind:this={carousel_elem}>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="intro-image rounded" src="oig-1.webp" alt="oig-1" />
+            </div>
+            <div class="carousel-item">
+                <img class="intro-image rounded" src="oig-2.webp" alt="oig-2" />
+            </div>
+            <div class="carousel-item">
+                <img class="intro-image rounded" src="oig-3.webp" alt="oig-3" />
+            </div>
+        </div>
+    </div>
     <div class="right-box">
         <p class="right-box-text text-white fw-medium mx-3 p-5">
             In the realm of online marketing, brands breathe life through compelling ideas and relevance. The power and sustainability of a brand hinge on its unique concept, shaping a persona that influences thoughts, emotions, and actions. The greater the online relevance, the more profound and impactful the brand's presence becomes.
@@ -100,15 +128,24 @@
         <a class="nav-link rounded-pill {tab_active[1]}" aria-current="page" href="javascript:" on:click={on_tab1}>Platform Strategy</a>
         <a class="nav-link rounded-pill {tab_active[2]}" aria-current="page" href="javascript:" on:click={on_tab2}>Content Solution</a>
     </div>
-    <p class="fs-4 fw-semibold text-center gray-700">
+    <div class="tab-content">
         {#if tab_active[0] == "active"}
-            We run Online Advertising Campaigns on selected channels based on business requirements from increasing Online TOMA to driving conversion
+            <img class="tab-image rounded me-4" src="oig-4.webp" alt="oig-4" />
+            <p class="fs-4 fw-semibold gray-700">
+                We run Online Advertising Campaigns on selected channels based on business requirements from increasing Online TOMA to driving conversion
+            </p>
         {:else if tab_active[1] == "active"}
-            Omnichannel Online Marketing Strategy and Management A comprehensive solution for all online marketing needs.
+            <p class="fs-4 fw-semibold text-end gray-700">
+                Omnichannel Online Marketing Strategy and Management A comprehensive solution for all online marketing needs.
+            </p>
+            <img class="tab-image rounded ms-4" src="oig-5.webp" alt="oig-5" />
         {:else}
-            Human centric designs to drive effective results for online marketing.
+            <img class="tab-image rounded me-4" src="oig-6.webp" alt="oig-6" />
+            <p class="fs-4 fw-semibold gray-700">
+                Human centric designs to drive effective results for online marketing.
+            </p>
         {/if}
-    </p>
+    </div>
 </div>
 
 <style>
@@ -128,7 +165,18 @@
     {
         width: 100%;
         display: flex;
-        justify-content: end;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .intro-carousel
+    {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .intro-image
+    {
+        max-height: 300px;
     }
     .right-box
     {
@@ -157,9 +205,14 @@
     {
         display: flex;
     }
+    .tab-content
+    {
+        display: flex;
+        /* align-items: center; */
+    }
     .tab-info
     {
-        width: 1200px;
+        width: 800px;
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -169,8 +222,13 @@
         display: flex;
         justify-content: center;
     }
+    .tab-image
+    {
+        max-height: 150px;
+    }
     @media (max-width: 767px)
     {
+
         .big-text
         {
             font-size: 350%;
