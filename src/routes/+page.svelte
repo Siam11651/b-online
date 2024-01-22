@@ -128,24 +128,28 @@
         <a class="nav-link rounded-pill {tab_active[1]}" aria-current="page" href="javascript:" on:click={on_tab1}>Platform Strategy</a>
         <a class="nav-link rounded-pill {tab_active[2]}" aria-current="page" href="javascript:" on:click={on_tab2}>Content Solution</a>
     </div>
-    <div class="tab-content">
-        {#if tab_active[0] == "active"}
+    {#if tab_active[0] == "active"}
+        <div class="tab-content">
             <img class="tab-image rounded me-4" src="oig-4.webp" alt="oig-4" />
             <p class="fs-4 fw-semibold gray-700">
                 We run Online Advertising Campaigns on selected channels based on business requirements from increasing Online TOMA to driving conversion
             </p>
-        {:else if tab_active[1] == "active"}
+        </div>
+    {:else if tab_active[1] == "active"}
+        <div class="tab-content">
             <p class="fs-4 fw-semibold text-end gray-700">
                 Omnichannel Online Marketing Strategy and Management A comprehensive solution for all online marketing needs.
             </p>
             <img class="tab-image rounded ms-4" src="oig-5.webp" alt="oig-5" />
-        {:else}
+        </div>
+    {:else}
+        <div class="tab-content">
             <img class="tab-image rounded me-4" src="oig-6.webp" alt="oig-6" />
             <p class="fs-4 fw-semibold gray-700">
                 Human centric designs to drive effective results for online marketing.
             </p>
-        {/if}
-    </div>
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -176,7 +180,7 @@
     }
     .intro-image
     {
-        max-height: 300px;
+        max-width: 400px;
     }
     .right-box
     {
@@ -208,7 +212,6 @@
     .tab-content
     {
         display: flex;
-        /* align-items: center; */
     }
     .tab-info
     {
@@ -226,16 +229,48 @@
     {
         max-height: 150px;
     }
+    @media (max-width: 1199px)
+    {
+        .right-box-container
+        {
+            display: inline;
+            align-items: end;
+        }
+        .intro-carousel
+        {
+            margin-right: 2em;
+            margin-bottom: 2em;
+        }
+    }
     @media (max-width: 767px)
     {
-
         .big-text
         {
             font-size: 350%;
         }
+        .intro-carousel
+        {
+            width: 90%;
+            margin-right: auto;
+            margin-right: auto;
+            margin-bottom: 2em;
+        }
+        .intro-image
+        {
+            width: 100%;
+        }
         .design
         {
             display: none;
+        }
+        .tab-content
+        {
+            display: block;
+        }
+        .tab-image
+        {   
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
     }
     @media (max-width: 400px)
