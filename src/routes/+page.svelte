@@ -263,6 +263,13 @@
         {
             display: none;
         }
+    }
+    @media (max-width: 450px)
+    {
+        .big-text
+        {
+            font-size: 250%;
+        }
         .tab-content
         {
             display: block;
@@ -271,13 +278,6 @@
         {   
             margin-top: 1em;
             margin-bottom: 1em;
-        }
-    }
-    @media (max-width: 400px)
-    {
-        .big-text
-        {
-            font-size: 250%;
         }
     }
 </style>
