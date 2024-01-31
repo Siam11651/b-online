@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import "../style.scss";
-    import { Carousel } from "bootstrap";
+    import { Carousel, Tab } from "bootstrap";
 
     let tab_active: string[] = ["active", "", ""];
     let carousel_elem: HTMLDivElement;
@@ -124,11 +124,37 @@
 <div class="tab-info my-5">
     <!-- svelte-ignore a11y-invalid-attribute -->
     <div class="tab-options nav nav-pills mb-3">
-        <a class="nav-link rounded-pill {tab_active[0]}" aria-current="page" href="javascript:" on:click={on_tab0}>Online Marketing</a>
-        <a class="nav-link rounded-pill {tab_active[1]}" aria-current="page" href="javascript:" on:click={on_tab1}>Platform Strategy</a>
-        <a class="nav-link rounded-pill {tab_active[2]}" aria-current="page" href="javascript:" on:click={on_tab2}>Content Solution</a>
+        <a class="nav-link rounded-pill active" data-bs-toggle="tab" data-bs-target="#tab-1" href="javascript:">Online Marketing</a>
+        <a class="nav-link rounded-pill" data-bs-toggle="tab" data-bs-target="#tab-2" href="javascript:">Platform Strategy</a>
+        <a class="nav-link rounded-pill" data-bs-toggle="tab" data-bs-target="#tab-3" href="javascript:">Content Solution</a>
     </div>
-    {#if tab_active[0] == "active"}
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+            <div class="tab-item">
+                <img class="tab-image rounded me-4" src="oig-4.webp" alt="oig-4" />
+                <p class="fs-4 fw-semibold gray-700">
+                    We run Online Advertising Campaigns on selected channels based on business requirements from increasing Online TOMA to driving conversion
+                </p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab-2" role="tabpanel">
+            <div class="tab-item">
+                <p class="fs-4 fw-semibold gray-700 me-4">
+                    Omnichannel Online Marketing Strategy and Management A comprehensive solution for all online marketing needs.
+                </p>
+                <img class="tab-image rounded" src="oig-5.webp" alt="oig-5" />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab-3" role="tabpanel">
+            <div class="tab-item">
+                <img class="tab-image rounded me-4" src="oig-6.webp" alt="oig-6" />
+                <p class="fs-4 fw-semibold gray-700">
+                    Human centric designs to drive effective results for online marketing.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- {#if tab_active[0] == "active"}
         <div class="tab-content">
             <img class="tab-image rounded me-4" src="oig-4.webp" alt="oig-4" />
             <p class="fs-4 fw-semibold gray-700">
@@ -149,7 +175,7 @@
                 Human centric designs to drive effective results for online marketing.
             </p>
         </div>
-    {/if}
+    {/if} -->
 </div>
 
 <div class="mid border-top py-3 px-5">
@@ -235,7 +261,7 @@
     {
         display: flex;
     }
-    .tab-content
+    .tab-item
     {
         display: flex;
     }
@@ -313,7 +339,7 @@
         {
             font-size: 250%;
         }
-        .tab-content
+        .tab-item
         {
             display: block;
         }
